@@ -355,6 +355,7 @@ header {
     background: #d0d0d08c;
     position: absolute;
     top: 0;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-evenly;
