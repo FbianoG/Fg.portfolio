@@ -14,7 +14,7 @@ body {
 
 header {
     height: 60px;
-    width: 60%;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 50%;
@@ -25,7 +25,7 @@ header {
     border-bottom: 1px solid #ccc;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    /* background-color: ; */
+    background-color:#ffffff92;
     z-index: 20;
 }
 
@@ -55,19 +55,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
 }
 
 .menu a:hover {
     transition: 250ms;
     letter-spacing: 2px;
     background: linear-gradient(to right, #ff3300, #FF0000);
-    /* Definindo o gradiente desejado */
     -webkit-background-clip: text;
-    /* Para navegadores Webkit (Chrome, Safari) */
     background-clip: text;
-    /* Para navegadores que suportam a especificação padrão */
     color: transparent;
-    /* Tornar o texto transparente */
+    font-weight: ;
 }
 
 
@@ -75,13 +73,13 @@ header {
 /* SECTIONS */
 
 .home {
-    margin: 0 auto 130px;
+    margin: 0 auto;
     width: 80%;
     /* border: 1px solid #aaa; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 70px;
-    padding: 70px 0;
+    padding: 80px 0;
     border-bottom: 1px solid #bbb;
 }
 
@@ -116,11 +114,12 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .home-data-left-text p {
     color: #333;
+    margin-bottom: 20px;
 }
 
 
@@ -159,13 +158,6 @@ header {
     z-index: -1;
 }
 
-
-
-
-
-
-
-
 .home-data-right-image img {
     width: 100%;
     height: 100%;
@@ -200,8 +192,8 @@ header {
 .home-data-right-social a:hover {
     transition: 250ms;
     border: 1px solid #bbb;
-    background: none;
-    color: #555;
+
+    opacity: 0.7;
 }
 
 .home-tech {
@@ -285,7 +277,8 @@ header {
 
 
 .projects {
-    margin: 0 auto 80px;
+    margin: 0 auto;
+    padding: 70px 0;
     /* border: 1px solid #bbb; */
     width: 80%;
 }
@@ -433,9 +426,6 @@ header {
 }
 
 @media screen and (max-width: 880px) {
-    header {
-        width: 100%;
-    }
 
     .home {
         display: block;
