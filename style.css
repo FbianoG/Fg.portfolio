@@ -25,7 +25,7 @@ header {
     border-bottom: 1px solid #ccc;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    background-color:#ffffff92;
+    background-color: #ffffff92;
     z-index: 20;
 }
 
@@ -78,7 +78,7 @@ header {
     /* border: 1px solid #aaa; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 70px;
+    row-gap: 115px;
     padding: 80px 0;
     border-bottom: 1px solid #bbb;
 }
@@ -278,26 +278,29 @@ header {
 
 .projects {
     margin: 0 auto;
-    padding: 70px 0;
-    /* border: 1px solid #bbb; */
+    padding: 70px 0 120px;
+    /* border-bottom: 1px solid #bbb; */
     width: 80%;
 }
 
-.projects-title {
+.projects-title,
+.about-title {
     margin: 0 auto;
     width: 350px;
     text-align: center;
     margin-bottom: 60px;
 }
 
-.projects-title h1 {
+.projects-title h1,
+.about-title h1 {
     font-weight: 500;
     font-size: 35px;
     color: #333;
     margin-bottom: 10px;
 }
 
-.projects-title p {
+.projects-title p,
+.about-title p {
     color: #444;
 }
 
@@ -318,6 +321,7 @@ header {
     box-shadow: 2px 2px 10px #ccc;
     position: relative;
     z-index: 5;
+    overflow: hidden;
 }
 
 .projects-list-card:hover {
@@ -343,6 +347,7 @@ header {
     height: 30%;
     display: flex;
     flex-wrap: wrap;
+    background: #d2d2d2;
 }
 
 .projects-list-card-legends h3 {
@@ -368,16 +373,18 @@ header {
 .projects-list-card-deep {
     width: 100%;
     height: 70%;
-    background: #ffffffb7;
+    background: linear-gradient(to bottom, #22222279, #d2d2d2);
     position: absolute;
     top: 0;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
+    padding: 0 0 30px;
     opacity: 0;
     z-index: -1;
+    transition: 450ms;
 }
 
 .projects-list-card-deep a {
@@ -392,7 +399,7 @@ header {
     border: 1px solid #999;
     border-radius: 20px;
     padding: 10px;
-    width: 100px;
+    width: 110px;
 }
 
 .projects-list-card-deep a i {
@@ -402,7 +409,6 @@ header {
 .projects-list-card:hover .projects-list-card-deep {
     z-index: 1;
     opacity: 1;
-    transition: 450ms;
 }
 
 .projects-list-card-deep a:hover {
@@ -411,13 +417,149 @@ header {
 
 }
 
+.about {
+    margin: 0 auto;
+    width: 100%;
+    height: 800px;
+    padding: 70px 0;
+}
+
+.about-back {
+    width: 100%;
+    height: 500px;
+    opacity: 0.5;
+    background: url('https://wallpapers.com/images/hd/programming-on-old-laptop-ig4rijlru38lm3va.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(100%);
+    display: flex;
+    position: relative;
+}
+
+
+
+
+
+footer {
+    background: #151515;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 10% 0;
+    color: #ddd;
+    gap: 40px;
+    row-gap: 40px;
+    justify-content: space-around;
+}
+
+
+
+footer div h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+footer div p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+footer div p b {
+    color: #ddd;
+}
+
+.footer-portfolio {
+    width: 400px;
+}
+
+.footer-portfolio h2 {
+    margin-bottom: 10px;
+}
+
+.footer-portfolio p {
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+
+
+.footer-social {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 30px;
+
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #ddd;
+font-size: 25px;
+}
+
+
+.footer-contactme {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-contactme input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 0 5px 5px;
+    outline: none;
+    color: #ddd;
+    width: 100%;
+
+}
+
+
+.footer-contactme button {
+    width: 70px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #333;
+    border-left: none;
+    border-right: none;
+    color: #ddd;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-contactme button:hover {
+
+    transition: 350ms;
+    background: #ddd;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+
+
+.footer-me {
+    border-top: 1px solid #333;
+    min-width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
 
 
 
-.projects-list-card-legends {}
+
+
+
+
 
 @media screen and (max-width: 910px) {
     .projects {
@@ -466,6 +608,19 @@ header {
     .menu {
         gap: 30px;
     }
+}
+
+@media screen and (max-width: 803px) {
+    .footer-portfolio {
+        text-align: center;
+    }
+
+
+
+    .footer-social {
+        justify-content: center;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
