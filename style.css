@@ -415,20 +415,6 @@ header {
 }
 
 .about {
-    margin: 0 auto 60px;
-    width: 100%;
-
-    min-height: 400px;
-    padding: 120px 10% 50px;
-    /* background: #333; */
-    display: grid;
-    grid-template-columns: 35% 1fr 60%;
-    row-gap: 20px;
-    align-items: center;
-    transition: height 400ms;
-}
-
-.about-title {
     margin: 0 auto;
     width: 350px;
     text-align: center;
@@ -440,111 +426,29 @@ header {
 
 }
 
-.about-line {
-    border-right: 1px solid #ff33007e;
-    height: 100%;
-    width: 1px;
-}
-
-.about-title h1 {
-    font-weight: 100;
-    font-size: 70px;
-    color: #333;
-
-}
-
-.about-text {
-    color: #444;
-    height: 100%;
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.about-text-more {
-    height: 0px;
-    overflow: hidden;
-    transition: 500ms;
-}
-
-.about-text-more a{
-    color: #333;
-    text-decoration: none;
-    font-style: italic;
-}
-
-
-.about-text button {
-    width: 120px;
-    height: 45px;
-    background: transparent;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    color: #555;
-    font-weight: 500;
-    letter-spacing: 2px;
-    font-size: 16px;
-}
-
-.about-text button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    border-top: 1px solid #ff33007e;
-    transition: 350ms;
-}
-
-.about-text button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    border-bottom: 1px solid #ff33007e;
-    transition: 350ms;
-}
-
-.about-text button:hover::after,
-.about-text button:hover::before {
+.about-back {
     width: 100%;
-
+    height: 500px;
+    opacity: 0.5;
+    background: url('https://wallpapers.com/images/hd/programming-on-old-laptop-ig4rijlru38lm3va.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(100%);
+    display: flex;
+    position: relative;
 }
-
-.about-text button:hover {
-    color: #999;
-    transition: 350ms;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 footer {
-    background: #333;
+    background: #151515;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 20px 10% 0;
-    color: #ccc;
+    color: #ddd;
     gap: 40px;
     row-gap: 15px;
     justify-content: space-around;
@@ -564,7 +468,7 @@ footer div p {
 }
 
 footer div p b {
-    color: #bbb;
+    color: #ddd;
 }
 
 .footer-portfolio {
@@ -592,8 +496,8 @@ footer div p b {
 
 .footer-social a {
     text-decoration: none;
-    color: #999;
-    font-size: 25px;
+    color: #ddd;
+font-size: 25px;
 }
 
 
@@ -606,8 +510,42 @@ footer div p b {
     justify-content: center;
 }
 
+.footer-contactme input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 0 5px 5px;
+    outline: none;
+    color: #ddd;
+    width: 100%;
+
+}
+
+
+.footer-contactme button {
+    width: 70px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #333;
+    border-left: none;
+    border-right: none;
+    color: #ddd;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-contactme button:hover {
+
+    transition: 350ms;
+    background: #ddd;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+
+
 .footer-me {
-    border-top: 1px solid #666;
+    border-top: 1px solid #333;
     min-width: 100%;
     height: 40px;
     display: flex;
