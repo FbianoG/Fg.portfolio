@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    background: linear-gradient(to right, #ff3300, #FF0000);
+    background: linear-gradient(to right, #ff3300, #e40d2d, #f30438);
     background-clip: text;
     -webkit-background-clip: text;
     /* Para navegadores Webkit (Chrome, Safari) */
@@ -57,11 +57,8 @@ header {
 
 .menu a:hover {
     transition: 250ms;
-    letter-spacing: 2px;
-    background: linear-gradient(to right, #ff3300, #FF0000);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    letter-spacing: 1px;
+    opacity: 0.5;
 
 }
 
@@ -107,7 +104,8 @@ header {
 .home-data-left-text h3 {
     font-size: 25px;
     font-weight: normal;
-    background: linear-gradient(to right, #ff3300, #FF0000);
+
+    background: linear-gradient(to right, #ff3300, #e40d2d, #f30438);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -135,7 +133,7 @@ header {
     height: 300px;
     border-radius: 60px 20px 60px 40px;
     overflow: hidden;
-    box-shadow: 4px 4px 10px #999;
+    box-shadow: 4px 4px 10px #0000007e;
     position: relative;
 }
 
@@ -153,6 +151,7 @@ header {
     left: -40px;
     top: 105px;
     z-index: -1;
+    background: linear-gradient(to right, #ff330008, #e40d2d0e, #f304380e);
 }
 
 .home-data-right-image img {
@@ -172,13 +171,13 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    border: 1px solid #999;
+    border: 1px solid #FF0000;
     width: 50px;
     height: 50px;
     font-size: 30px;
     cursor: pointer;
     text-decoration: none;
-    background: linear-gradient(to right, #ff3300, #FF0000);
+    background: linear-gradient(to right, #ff3300, #e40d2d, #f30438);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -269,6 +268,11 @@ header {
 
 .home-tech-list-card i {
     font-size: 25px;
+    background: linear-gradient(to right, #ff3300c6, #e40d2db5, #f30438ba);
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Para navegadores Webkit (Chrome, Safari) */
+    color: transparent;
 }
 
 
@@ -286,13 +290,17 @@ header {
     width: 350px;
     text-align: center;
     margin-bottom: 60px;
+
 }
 
 .projects-title h1,
 .about-title h1 {
     font-weight: 500;
     font-size: 35px;
-    color: #333;
+    background: linear-gradient(to right, #ff3300, #e40d2d, #f30438);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     margin-bottom: 10px;
 }
 
@@ -330,6 +338,7 @@ header {
     min-width: 300px;
     /* height: 300px; */
     background: #ddd;
+
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 2px 2px 10px #0000004b;
@@ -342,6 +351,7 @@ header {
     border: 1px solid #ff00003a;
     transition: 250ms;
     background: #e2e2e2;
+    background: linear-gradient(to right, #ff330014, #e40d2d14, #f3043816);
     box-shadow: 2px 2px 10px #00000000;
 }
 
@@ -361,6 +371,13 @@ header {
     color: #666;
     font-size: 14px;
     height: 80px;
+}
+
+.projects-list-card I {
+    background: linear-gradient(to right, #ff3300c6, #e40d2db5, #f30438ba);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .projects-list-card-techs {
@@ -631,7 +648,6 @@ footer div p b {
         gap: 30px;
         justify-content: flex-start;
         padding: 10px;
-        padding-left: 30px;
         flex-wrap: nowrap;
     }
 }
