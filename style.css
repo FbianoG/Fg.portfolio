@@ -415,11 +415,7 @@ header {
 .about {
     margin: 0 auto;
     width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
+    max-width: 1500px;
     padding: 150px 10% 60px;
 
 
