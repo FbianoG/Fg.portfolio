@@ -429,7 +429,7 @@ header {
     background: linear-gradient(to right, #ff3300, #e40d2d, #f30438);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: red;
 }
 
 .projects-list {

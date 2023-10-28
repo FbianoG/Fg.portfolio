@@ -1,16 +1,16 @@
 
 let filter = document.querySelectorAll('.projects-filter')[0]
-
 let btnFilter = filter.querySelectorAll("span")
-
-let main
-
 let mainProject = document.querySelectorAll('.main')
 let secProject = document.querySelectorAll('.sec')
+
+
+
 
 btnFilter.forEach(element => {
     element.addEventListener('click', filteProject)
 });
+
 
 
 
@@ -45,3 +45,8 @@ function secShow(e) {
         element.style.display = e
     });
 }
+
+
+
+
+btnFilter[0].click()
