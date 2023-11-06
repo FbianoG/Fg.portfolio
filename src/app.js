@@ -5,8 +5,6 @@ let mainProject = document.querySelectorAll('.main')
 let secProject = document.querySelectorAll('.sec')
 
 
-
-
 btnFilter.forEach(element => {
     element.addEventListener('click', filteProject)
 });
