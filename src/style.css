@@ -742,8 +742,30 @@ footer div p b {
         font-size: 20px;
     }
 
-    .home-data-right-image-container::before {
-        display: none;
+    .home-image {
+        padding: 0 0 50px;
+    }
+
+    .apresentation-content {
+        width: 90%;
+    }
+
+    .apresentation-content button {
+        margin-bottom: 60px;
+    }
+
+    .my-image {
+        width: 340px;
+        height: 290px;
+    }
+
+    .image {
+        width: 320px;
+        height: 270px;
+    }
+
+    .tech-list {
+        gap: 10px;
     }
 
     .projects-list {
