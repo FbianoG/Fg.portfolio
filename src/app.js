@@ -33,6 +33,7 @@ function filteProject() {
     }
 }
 
+
 function mainShow(e) {
     mainProject.forEach(element => {
         element.style.display = e

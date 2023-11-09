@@ -8,6 +8,13 @@
     scroll-behavior: smooth;
 }
 
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
 body {
     background: #fbfafb;
     background-repeat: no-repeat;
@@ -26,7 +33,6 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* border-bottom: 1px solid #ccc; */
     background-color: #fbfafb;
     box-shadow: 0px 3px 5px #0000000d;
     z-index: 20;
@@ -664,82 +670,58 @@ footer div p b {
 
 /* RESPONSIVIDADE */
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1023px) {
+    .home {
+        width: 95%;
+    }
     .about {
         padding: 70px 5%;
         grid-template-columns: 1fr;
     }
-}
+    .my-image {
+        width: 340px;
+        height: 290px;
+    }
+    .image {
+        width: 320px;
+        height: 270px;
+    }
 
-@media screen and (max-width: 910px) {
     .projects {
         width: 95%;
     }
 }
 
-@media screen and (max-width: 880px) {
-
-    .home {
-        display: block;
-        width: 95%;
-    }
-
-    .home-data-left-text {
-        width: 90%;
-    }
-
-
-
-    .home-tech-card {
-        height: 50px;
-        width: 120px;
-    }
-
-    .home-tech-list-card::before {
-        width: 100%;
-    }
-
-    .home-tech-list-card::after {
-        width: 100%;
-    }
-
-    .home-data-right {
-        gap: 50px;
-    }
-
-    .home-data-right-image-container::before {
-        left: -45px;
-        top: 30px;
-    }
-
-}
-
-@media screen and (max-width: 840px) {
-    .menu {
-        gap: 30px;
-    }
-}
-
-@media screen and (max-width: 803px) {
-    .footer-portfolio {
+/* MB <= 767 - TB <= 1023 - */
+@media screen and (max-width: 791px) {
+    .footer-portfolio{
         text-align: center;
     }
-
-
-
     .footer-social {
-        justify-content: center;
+        margin: 0 auto;
+        width: fit-content;
     }
-
 }
 
-@media screen and (max-width: 500px) {
+
+
+
+/* MB <= 767 - TB <= 1023 - */
+@media screen and (max-width: 767px) {
+    header {
+        width: 100%;
+    }
     .menu {
         gap: 0;
     }
 
     .logo {
         font-size: 20px;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
     }
 
     .home-image {
