@@ -41,7 +41,7 @@ async function sendEmail(e) { // Envia o formulário de contato para meu Email
 }
 
 function contact() { // Scrola a página à section de "contato" ao clicar no button 
-    window.location.href = '/#contact'
+    window.location.href = '/Fg.portfolio/#contact'
 }
 
 function filteProject() { // filtra os projetos de acordo com a categoria
