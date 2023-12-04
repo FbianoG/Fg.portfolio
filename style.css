@@ -462,7 +462,6 @@ header {
     min-width: 300px;
     /* height: 300px; */
     background: #fff;
-
     border: 1px solid transparent;
     border-radius: 10px;
     box-shadow: 3px 3px 10px #00000034;
@@ -474,7 +473,7 @@ header {
 
 .projects-card:hover {
     /* border: 1px solid #ff00003a; */
-    transition: 250ms;
+    transition: 300ms;
     box-shadow: none;
     border: 1px solid #eee;
 
@@ -485,45 +484,14 @@ header {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    transition: 250ms;
+    transition: 300ms;
 }
 
 .projects-card:hover img {
-    -webkit-animation: kenburns-bottom 5s ease-out both;
-    animation: kenburns-bottom 5s ease-out both;
+    transform: scale(1.02);
 }
 
-@-webkit-keyframes kenburns-bottom {
-    0% {
-        -webkit-transform: scale(1) translateY(0);
-        transform: scale(1) translateY(0);
-        -webkit-transform-origin: 50% 84%;
-        transform-origin: 50% 84%;
-    }
 
-    100% {
-        -webkit-transform: scale(1.25) translateY(15px);
-        transform: scale(1.25) translateY(15px);
-        -webkit-transform-origin: bottom;
-        transform-origin: bottom;
-    }
-}
-
-@keyframes kenburns-bottom {
-    0% {
-        -webkit-transform: scale(1) translateY(0);
-        transform: scale(1) translateY(0);
-        -webkit-transform-origin: 50% 84%;
-        transform-origin: 50% 84%;
-    }
-
-    100% {
-        -webkit-transform: scale(1.25) translateY(15px);
-        transform: scale(1.25) translateY(15px);
-        -webkit-transform-origin: bottom;
-        transform-origin: bottom;
-    }
-}
 
 
 

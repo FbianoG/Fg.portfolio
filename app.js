@@ -13,7 +13,7 @@ let btnSendEmail = document.querySelector('#btn-email')
 // Eventos
 
 btnFilter.forEach(element => { // filtra os projetos de acordo com a categoria
-    element.addEventListener('click', filteProject) 
+    element.addEventListener('click', filteProject)
 })
 btnContact.addEventListener('click', contact) // Scrola a página à section de "contato" ao clicar no button 
 btnSendEmail.addEventListener('click', (e) => sendEmail(e)) // Envia o formulário de contato para meu Email
@@ -25,6 +25,7 @@ btnSendEmail.addEventListener('click', (e) => sendEmail(e)) // Envia o formulár
 
 async function sendEmail(e) { // Envia o formulário de contato para meu Email
     e.preventDefault()
+
     const name = document.querySelector('[name="name"]').value
     const email = document.querySelector('[name="email"]').value
     const message = document.querySelector('[name="message"]').value
@@ -33,8 +34,9 @@ async function sendEmail(e) { // Envia o formulário de contato para meu Email
         return
     }
     try {
-        const response = await emailjs.sendForm('service_an5y8sf', 'template_3o8qe56', formContact);
-        location.reload();
+        btnSendEmail.setAttribute("disabled", "true")
+        await emailjs.sendForm('service_an5y8sf', 'template_3o8qe56', formContact);
+        location.reload()
     } catch (error) {
         console.log('Erro ao enviar e-mail:', error);
     }
