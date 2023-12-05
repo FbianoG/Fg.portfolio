@@ -236,11 +236,11 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    animation: show 1000ms 2s both;
 }
 
 .home-social a:hover {
     transition: 250ms;
-    border: 1px solid transparent;
     box-shadow: none;
     border: 1px solid #ddd;
 }
