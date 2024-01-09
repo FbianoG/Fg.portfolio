@@ -49,7 +49,7 @@ let allProjects = [
         tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
         webCode: "",
         webLink: "https://fg-torrent.onrender.com/",
-        src: "/img/FG.torrent.png",
+        src: "img/FG.torrent.png",
     },
     {
         name: "FisioMov",
@@ -57,7 +57,7 @@ let allProjects = [
         tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
         webCode: "",
         webLink: "https://fisiomov.onrender.com",
-        src: "/img/fisioMov.png",
+        src: "img/fisioMov.png",
     },
     {
         name: "Steam",
@@ -65,7 +65,7 @@ let allProjects = [
         tech: ["HTML", "CSS", "JS"],
         webCode: "",
         webLink: "https://fbianog.github.io/Steam-CopSite/",
-        src: "/img/Steam-CopySite.png",
+        src: "img/Steam-CopySite.png",
     },
     {
         name: "Pokedex",
@@ -73,7 +73,7 @@ let allProjects = [
         tech: ["HTML", "CSS", "JS"],
         webCode: "",
         webLink: "https://fbianog.github.io/Pokedex/",
-        src: "/img/Pokedex.png",
+        src: "img/Pokedex.png",
     },
     {
         name: "teste1",
@@ -81,7 +81,7 @@ let allProjects = [
         tech: ["HTML", "CSS", "JS"],
         webCode: "",
         webLink: "https://fbianog.github.io/Pokedex/",
-        src: "/img/Pokedex.png",
+        src: "img/Pokedex.png",
     },
     {
         name: "teste2",
@@ -89,7 +89,7 @@ let allProjects = [
         tech: ["HTML", "CSS", "JS"],
         webCode: "",
         webLink: "https://fbianog.github.io/Pokedex/",
-        src: "/img/Pokedex.png",
+        src: "img/Pokedex.png",
     },
 ]
 
