@@ -2,7 +2,7 @@
 let filter = document.querySelectorAll('.projects-filter')[0]
 let btnFilter = filter.querySelectorAll(".projects-filter button")
 let mainProject
-let secProject 
+let secProject
 let btnContact = document.querySelector('#btn-contact')
 let formContact = document.querySelector('#form-contact')
 let btnSendEmail = document.querySelector('#btn-email')
@@ -17,8 +17,8 @@ const allSections = document.querySelectorAll('section')
 let projectList = document.querySelectorAll('.projects-list')[0]
 
 
-let isDragging 
-let startX 
+let isDragging
+let startX
 let scrollLeft
 
 projectList.addEventListener('mousedown', (e) => {
@@ -107,27 +107,47 @@ allSections.forEach(element => {
 
 
 btnInit.addEventListener('click', () => {
-    countPage = 0
-    wheel("")
+    if (window.innerWidth <= 1278) {
+        document.querySelector('#home').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        countPage = 0
+        wheel("")
+    }
 })
 btnAbout.addEventListener('click', () => {
-    countPage = 1
-    wheel("")
+    if (window.innerWidth <= 1278) {
+        document.querySelector('#about').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        countPage = 1
+        wheel("")
+    }
 })
 btnProjects.addEventListener('click', () => {
-    countPage = 2
-    wheel("")
+    if (window.innerWidth <= 1278) {
+        document.querySelector('#projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        countPage = 2
+        wheel("")
+    }
 })
 
 btnContact.addEventListener('click', () => {
-    countPage = 3
-    wheel("")
+    if (window.innerWidth <= 1278) {
+        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        countPage = 3
+        wheel("")
+    }
 }) // Scrola a página à section de "contato" ao clicar no button 
 
 
 btnContactHd.addEventListener('click', () => {
-    countPage = 3
-    wheel("")
+    if (window.innerWidth <= 1278) {
+        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        countPage = 3
+        wheel("")
+    }
 })
 // Eventos
 
@@ -176,7 +196,6 @@ function wheel(e) {
         countPage -= 1
         countPage < 0 ? countPage = 0 : ''
     }
-    console.log(countPage);
 
     if (countPage == 1) {
         home.style.top = "-100%"
