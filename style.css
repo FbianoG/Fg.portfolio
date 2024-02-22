@@ -482,13 +482,12 @@ header {
 }
 
 .projects-list::-webkit-scrollbar {
-    height: 2px;
+    height: 5px;
 }
 
 .projects-list::-webkit-scrollbar-track {
     background: #333;
     border-radius: 10px;
-
 }
 
 .projects-list::-webkit-scrollbar-thumb {
@@ -1078,7 +1077,7 @@ footer div p b {
 
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
     .home {
         padding: 70px 1%;
     }
@@ -1105,6 +1104,14 @@ footer div p b {
 
     .projects {
         width: 95%;
+    }
+
+    .projects-list {
+        overflow-x: auto;
+        gap: 30px;
+        justify-content: flex-start;
+        padding: 10px;
+        flex-wrap: nowrap;
     }
 
 
@@ -1190,11 +1197,12 @@ footer div p b {
     }
 
     .menu {
-        gap: 5px;
+        gap: 7px;
     }
 
     .menu a {
         width: fit-content;
+        font-size: 15px;
     }
 
     .tech-title {
