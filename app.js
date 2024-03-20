@@ -1,48 +1,5 @@
 // Variáveis
-let filter = document.querySelectorAll('.projects-filter')[0]
-let btnFilter = filter.querySelectorAll(".projects-filter button")
-let mainProject
-let secProject
-let btnContact = document.querySelector('#btn-contact')
-let formContact = document.querySelector('#form-contact')
-let btnSendEmail = document.querySelector('#btn-email')
-
-let btnInit = document.querySelectorAll('[hreff="#home"')[0]
-let btnAbout = document.querySelectorAll('[hreff="#about"')[0]
-let btnProjects = document.querySelectorAll('[hreff="#projects"')[0]
-let btnContactHd = document.querySelectorAll('[hreff="#contact"')[0]
-let cardProjects
-let countSpan = document.querySelectorAll('.count span')
-const allSections = document.querySelectorAll('section')
-let projectList = document.querySelectorAll('.projects-list')[0]
-
-
-let isDragging
-let startX
-let scrollLeft
-
-projectList.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.pageX - projectList.offsetLeft
-    scrollLeft = projectList.scrollLeft
-})
-
-projectList.addEventListener('mouseup', () => {
-    isDragging = false;
-});
-
-projectList.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - projectList.offsetLeft;
-    const walk = (x - startX) * 2; // Ajuste conforme necessário
-    projectList.scrollLeft = scrollLeft - walk;
-});
-
-
-
-
-let allProjects = [
+let allProjects = [ // Projetos
     {
         name: "FG.Torrent",
         main: true,
@@ -108,21 +65,52 @@ let allProjects = [
         src: "",
     },
 ]
+const home = document.querySelector('#home')
+const about = document.querySelector('#about')
+const projects = document.querySelector('#projects')
+const contactt = document.querySelector("#contact")
+// const allSections = document.querySelectorAll('section')
+let filter = document.querySelectorAll('.projects-filter')[0]
+let btnFilter = filter.querySelectorAll(".projects-filter button")
+let mainProject
+let secProject
+let btnContact = document.querySelector('#btn-contact')
+let formContact = document.querySelector('#form-contact')
+const btnSendEmail = document.querySelector('#btn-email')
+let btnInit = document.querySelectorAll('[hreff="#home"')[0]
+let btnAbout = document.querySelectorAll('[hreff="#about"')[0]
+let btnProjects = document.querySelectorAll('[hreff="#projects"')[0]
+let btnContactHd = document.querySelectorAll('[hreff="#contact"')[0]
+let cardProjects
+let countSpan = document.querySelectorAll('.count span')
+let projectList = document.querySelectorAll('.projects-list')[0]
+let isDragging
+let startX
+let scrollLeft
+let countPage = 0 // Contador da "section" atual
 
 
+// Eventos
 
-
-
-
-
-let countPage = 0
-
-allSections.forEach(element => {
-    element.style.transition = "1000ms ease-in-out"
+projectList.addEventListener('mousedown', (e) => {
+    isDragging = true
+    startX = e.pageX - projectList.offsetLeft
+    scrollLeft = projectList.scrollLeft
 })
 
+projectList.addEventListener('mouseup', () => {
+    isDragging = false
+})
 
-btnInit.addEventListener('click', () => {
+projectList.addEventListener('mousemove', (e) => {
+    if (!isDragging) return
+    e.preventDefault()
+    const x = e.pageX - projectList.offsetLeft;
+    const walk = (x - startX) * 2
+    projectList.scrollLeft = scrollLeft - walk;
+})
+
+btnInit.addEventListener('click', () => { // Evento - scrola a página até o "Início"
     if (window.innerWidth <= 1278) {
         document.querySelector('#home').scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
@@ -130,7 +118,8 @@ btnInit.addEventListener('click', () => {
         wheel("")
     }
 })
-btnAbout.addEventListener('click', () => {
+
+btnAbout.addEventListener('click', () => { // Evento - scrola a página até o "Sobre"
     if (window.innerWidth <= 1278) {
         document.querySelector('#about').scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
@@ -138,7 +127,8 @@ btnAbout.addEventListener('click', () => {
         wheel("")
     }
 })
-btnProjects.addEventListener('click', () => {
+
+btnProjects.addEventListener('click', () => { // Evento - scrola a página até o "Projetos"
     if (window.innerWidth <= 1278) {
         document.querySelector('#projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
@@ -147,17 +137,7 @@ btnProjects.addEventListener('click', () => {
     }
 })
 
-btnContact.addEventListener('click', () => {
-    if (window.innerWidth <= 1278) {
-        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-        countPage = 3
-        wheel("")
-    }
-}) // Scrola a página à section de "contato" ao clicar no button 
-
-
-btnContactHd.addEventListener('click', () => {
+btnContact.addEventListener('click', () => { // Evento - scrola a página até o "Contato"
     if (window.innerWidth <= 1278) {
         document.querySelector('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
@@ -165,50 +145,27 @@ btnContactHd.addEventListener('click', () => {
         wheel("")
     }
 })
-// Eventos
+
+btnContactHd.addEventListener('click', () => { // Evento - scrola a página até o formulário de e-mail
+    if (window.innerWidth <= 1278) {
+        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        countPage = 3
+        wheel("")
+    }
+})
+
+btnSendEmail.addEventListener('click', (e) => sendEmail(e)) // Evento = envia o formulário para o meu Email
+document.body.addEventListener('wheel', wheel) // Evento = altera as "sections" ao scrolar o mouse
 
 
-btnSendEmail.addEventListener('click', (e) => sendEmail(e)) // Envia o formulário de contato para meu Email
+// Funções
 
-
-// list[0].style.animation = `slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms both;`
-
-
-function projectCard() {
-    cardProjects.forEach((element, index) => {
-        element.style.animation = "fade-in-right 0.6s ease-out";
-        element.style.animationDelay = `${0.2 * index}s`;
-        element.style.animationFillMode = "both";
-    });
-}
-
-
-
-const home = document.querySelector('#home')
-const about = document.querySelector('#about')
-const projects = document.querySelector('#projects')
-const contactt = document.querySelector("#contact")
-// document.querySelectorAll(".logo")[0]
-
-changeSpan(countPage)
-function changeSpan(e) {
-    countSpan.forEach((element, index) => {
-        element.id = ""
-        if (index == e) {
-            element.id = "spanActive"
-        }
-    })
-}
-
-document.body.addEventListener('wheel', wheel)
-
-function wheel(e) {
-
+function wheel(e) { // Função - altera as "sections" ao scrolar o mouse ou clicar ao clicar no "menu"
     if (e.deltaY > 0) {
         countPage += 1
         countPage > 3 ? countPage = 3 : ''
-    }
-    else if (e.deltaY < 0) {
+    } else if (e.deltaY < 0) {
         countPage -= 1
         countPage < 0 ? countPage = 0 : ''
     }
@@ -237,33 +194,58 @@ function wheel(e) {
         about.style.top = "50%"
         changeSpan(countPage)
     }
-
-
 }
 
-
-// Funções
-
-async function sendEmail(e) { // Envia o formulário de contato para meu Email
-    e.preventDefault()
-
-    const name = document.querySelector('[name="name"]').value
-    const email = document.querySelector('[name="email"]').value
-    const message = document.querySelector('[name="message"]').value
-    if (name == "" || email == "" || message == "") {
-        console.log("Preencha todos os dados")
-        return
-    }
-    try {
-        btnSendEmail.setAttribute("disabled", "true")
-        await emailjs.sendForm('service_an5y8sf', 'template_3o8qe56', formContact);
-        location.reload()
-    } catch (error) {
-        console.log('Erro ao enviar e-mail:', error);
-    }
+function changeSpan(e) { // Função - altera a cor do contador lateral de acordo com a "section" atual
+    countSpan.forEach((element, index) => {
+        element.id = ""
+        if (index == e) {
+            element.id = "spanActive"
+        }
+    })
 }
 
-function filterProject() { // filtra os projetos de acordo com a categoria
+function projectCard() { // Função - cria efeito "fade-in" aos projetos quando a "section" é focada ou quando os projetos são filtrados
+    cardProjects.forEach((element, index) => {
+        element.style.animation = "fade-in-right 0.6s ease-out";
+        element.style.animationDelay = `${0.2 * index}s`;
+        element.style.animationFillMode = "both";
+    });
+}
+
+function createProjects() { // Função - cria o elemento de cada projeto registado
+    allProjects.forEach(element => {
+        createProjectHtml(element)
+    })
+    mainProject = document.querySelectorAll('.main')
+    secProject = document.querySelectorAll('.sec')
+    btnFilter.forEach(element => { // filtra os projetos de acordo com a categoria
+        element.addEventListener('click', filterProject)
+    })
+    cardProjects = document.querySelectorAll('.projects-card')
+}
+
+function createProjectHtml(e) { // Função - cria o "HTML" de cada elemento dos projetos
+    let newProject = document.createElement('div')
+    let type = e.main == true ? "main" : "sec"
+    newProject.classList = `projects-card ${type}`
+    newProject.innerHTML = `
+        <div class="card-data">
+            <label for="">${e.tech.join(" / ")}</label>
+            <h3>${e.name}</h3>
+            <div class="card-links">
+                <a href="${e.webCode}" target="_blank">Code</a>
+                <a href="${e.webLink}" target="_blank">Site</a>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="${e.src}" alt="Imagem ilustrativa do site">
+        </div>
+    `
+    projectList.appendChild(newProject)
+}
+
+function filterProject() { // Função - filtra os projetos de acordo com a categoria
     let child = this.parentElement.querySelectorAll('button')
     mainShow("none")
     secShow("none")
@@ -288,53 +270,41 @@ function filterProject() { // filtra os projetos de acordo com a categoria
     }, 0);
 }
 
-function mainShow(e) {
+function mainShow(e) { // Função - aplica o filtro dos projetos principais
     mainProject.forEach(element => {
         element.style.display = e
     });
 }
-function secShow(e) {
+
+function secShow(e) { // Função - aplica o filtro dos projetos secundários
     secProject.forEach(element => {
         element.style.display = e
     });
 }
 
-function createProjects() {
-    allProjects.forEach(element => {
-        createProjectHtml(element)
-    })
-
-    mainProject = document.querySelectorAll('.main')
-    secProject = document.querySelectorAll('.sec')
-    btnFilter.forEach(element => { // filtra os projetos de acordo com a categoria
-        element.addEventListener('click', filterProject)
-    })
-    cardProjects = document.querySelectorAll('.projects-card')
+async function sendEmail(e) { // Envia o formulário de contato para meu Email
+    e.preventDefault()
+    const name = document.querySelector('[name="name"]').value
+    const email = document.querySelector('[name="email"]').value
+    const message = document.querySelector('[name="message"]').value
+    if (name == "" || email == "" || message == "") {
+        console.log("Preencha todos os dados")
+        return
+    }
+    try {
+        btnSendEmail.setAttribute("disabled", "true")
+        await emailjs.sendForm('service_an5y8sf', 'template_3o8qe56', formContact);
+        location.reload()
+    } catch (error) {
+        console.log('Erro ao enviar e-mail:', error);
+    }
 }
 
-function createProjectHtml(e) {
-    let newProject = document.createElement('div')
-    let type = e.main == true ? "main" : "sec"
-    newProject.classList = `projects-card ${type}`
-    newProject.innerHTML = `
-        <div class="card-data">
-            <label for="">${e.tech.join(" / ")}</label>
-            <h3>${e.name}</h3>
-            <div class="card-links">
-                <a href="${e.webCode}" target="_blank">Code</a>
-                <a href="${e.webLink}" target="_blank">Site</a>
-            </div>
-        </div>
-        <div class="card-image">
-            <img src="${e.src}" alt="Imagem ilustrativa do site">
-        </div>
-    `
-    projectList.appendChild(newProject)
-}
 
 // Chamadas
 
-emailjs.init("ceAIIFLHMCK_ganFy")
-wheel("")
-createProjects()
-btnFilter[0].click()
+wheel("") // Altera as "sections" ao scrolar o mouse ou clicar ao clicar no "menu"
+createProjects() // Cria o elemento de cada projeto registado
+changeSpan(countPage) // Altera a cor do contador lateral de acordo com a "section" atual
+btnFilter[0].click() // Deixa os projetos filtrados por "todos"
+emailjs.init("ceAIIFLHMCK_ganFy") // Chamada o "emailjs"

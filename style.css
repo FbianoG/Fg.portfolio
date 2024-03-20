@@ -13,6 +13,7 @@
 section {
     overflow: hidden;
     height: 100vh;
+    transition: 1000ms ease-in-out;
 }
 
 body {
