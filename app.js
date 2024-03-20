@@ -47,7 +47,7 @@ let allProjects = [
         name: "FG.Torrent",
         main: true,
         tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
-        webCode: "",
+        webCode: "https://github.com/FbianoG/FG.Torrent",
         webLink: "https://fg-torrent.onrender.com/",
         src: "img/FG.torrent.png",
     },
@@ -55,15 +55,15 @@ let allProjects = [
         name: "FisioMov",
         main: true,
         tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
-        webCode: "",
-        webLink: "https://fisiomov.onrender.com",
+        webCode: "https://github.com/FbianoG/Fisio-Mov",
+        webLink: "https://fbianog.github.io/FisioMov-Front/public/html/index.html",
         src: "img/fisioMov.png",
     },
     {
         name: "Steam",
         main: false,
         tech: ["HTML", "CSS", "JS"],
-        webCode: "",
+        webCode: "https://github.com/FbianoG/Steam-CopSite",
         webLink: "https://fbianog.github.io/Steam-CopSite/",
         src: "img/Steam-CopySite.png",
     },
@@ -71,25 +71,41 @@ let allProjects = [
         name: "Pokedex",
         main: false,
         tech: ["HTML", "CSS", "JS"],
-        webCode: "",
+        webCode: "https://github.com/FbianoG/Pokedex",
         webLink: "https://fbianog.github.io/Pokedex/",
         src: "img/Pokedex.png",
     },
     {
-        name: "teste1",
+        name: "OpenClima",
         main: false,
         tech: ["HTML", "CSS", "JS"],
-        webCode: "",
-        webLink: "https://fbianog.github.io/Pokedex/",
-        src: "img/Pokedex.png",
+        webCode: "https://github.com/FbianoG/Pokedex",
+        webLink: "https://fbianog.github.io/OpenClima/",
+        src: "img/openClima.png",
     },
     {
-        name: "teste2",
+        name: "Calculadora",
+        main: false,
+        tech: ["HTML", "CSS", "JS"],
+        webCode: "https://github.com/FbianoG/Calculadora",
+        webLink: "https://fbianog.github.io/Calculadora/",
+        src: "img/calc.png",
+    },
+    {
+        name: "App Estácio - Mobile",
+        main: false,
+        tech: ["HTML", "CSS", "JS"],
+        webCode: "https://github.com/FbianoG/App-Estacio",
+        webLink: "https://fbianog.github.io/App-Estacio/index.html",
+        src: "img/estacio.png",
+    },
+    {
+        name: "Jogo da Velha",
         main: false,
         tech: ["HTML", "CSS", "JS"],
         webCode: "",
-        webLink: "https://fbianog.github.io/Pokedex/",
-        src: "img/Pokedex.png",
+        webLink: "",
+        src: "",
     },
 ]
 
@@ -247,19 +263,16 @@ async function sendEmail(e) { // Envia o formulário de contato para meu Email
     }
 }
 
-
 function filterProject() { // filtra os projetos de acordo com a categoria
     let child = this.parentElement.querySelectorAll('button')
     mainShow("none")
     secShow("none")
-
     child.forEach(element => {
         element.style.background = ""
         element.style.color = ""
     });
     this.style.background = '#333'
     this.style.color = '#fdfdfd'
-
     setTimeout(() => {
         if (this.textContent == "Principais") {
             mainShow("block")
@@ -273,8 +286,6 @@ function filterProject() { // filtra os projetos de acordo com a categoria
             secShow("block")
         }
     }, 0);
-
-
 }
 
 function mainShow(e) {
@@ -288,8 +299,6 @@ function secShow(e) {
     });
 }
 
-
-
 function createProjects() {
     allProjects.forEach(element => {
         createProjectHtml(element)
@@ -302,7 +311,6 @@ function createProjects() {
     })
     cardProjects = document.querySelectorAll('.projects-card')
 }
-
 
 function createProjectHtml(e) {
     let newProject = document.createElement('div')
