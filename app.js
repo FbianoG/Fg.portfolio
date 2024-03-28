@@ -62,7 +62,7 @@ let allProjects = [ // Projetos
         tech: ["HTML", "CSS", "JS"],
         webCode: "https://github.com/FbianoG/JogoDaVelha",
         webLink: "https://fbianog.github.io/JogoDaVelha/",
-        src: "",
+        src: "img/velha.png",
     },
     {
         name: "SeeBox",
