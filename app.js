@@ -60,8 +60,8 @@ let allProjects = [ // Projetos
         name: "Jogo da Velha",
         main: false,
         tech: ["HTML", "CSS", "JS"],
-        webCode: "",
-        webLink: "",
+        webCode: "https://github.com/FbianoG/JogoDaVelha",
+        webLink: "https://fbianog.github.io/JogoDaVelha/",
         src: "",
     },
     {
