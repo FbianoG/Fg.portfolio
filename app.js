@@ -64,6 +64,14 @@ let allProjects = [ // Projetos
         webLink: "",
         src: "",
     },
+    {
+        name: "SeeBox",
+        main: true,
+        tech: ["HTML", "CSS", "JS", "Node.JS", "MongoDB"],
+        webCode: "https://github.com/FbianoG/SeeBox",
+        webLink: "https://fbianog.github.io/SeeBox/login.html",
+        src: "img/SeeBox.png",
+    },
 ]
 const home = document.querySelector('#home')
 const about = document.querySelector('#about')
