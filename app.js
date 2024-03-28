@@ -41,6 +41,14 @@ let allProjects = [ // Projetos
         src: "img/openClima.png",
     },
     {
+        name: "SeeBox",
+        main: true,
+        tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
+        webCode: "https://github.com/FbianoG/SeeBox",
+        webLink: "https://fbianog.github.io/SeeBox/login.html",
+        src: "img/SeeBox.png",
+    },
+    {
         name: "Calculadora",
         main: false,
         tech: ["HTML", "CSS", "JS"],
@@ -64,14 +72,7 @@ let allProjects = [ // Projetos
         webLink: "https://fbianog.github.io/JogoDaVelha/",
         src: "img/velha.png",
     },
-    {
-        name: "SeeBox",
-        main: true,
-        tech: ["HTML", "CSS", "JS", "Node.JS", "MongoDB"],
-        webCode: "https://github.com/FbianoG/SeeBox",
-        webLink: "https://fbianog.github.io/SeeBox/login.html",
-        src: "img/SeeBox.png",
-    },
+
 ]
 const home = document.querySelector('#home')
 const about = document.querySelector('#about')
