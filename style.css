@@ -549,6 +549,7 @@ header {
 
 .projects-card:hover img {
     transform: scale(0.96);
+    filter: brightness(0.7);
 }
 
 .projects-card:hover::after {
