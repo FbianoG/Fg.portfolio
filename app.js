@@ -189,8 +189,10 @@ function wheel(e) { // Função - altera as "sections" ao scrolar o mouse ou cli
         home.style.top = "-100%"
         about.style.top = "-100%"
         projects.style.top = "0px"
-        projectCard()
+        // projectCard()
+        createProjects(allProjects)
         contactt.style.top = "50%"
+        btnFilter[0].click()
         changeSpan(countPage)
     } else if (countPage == 3) {
         home.style.top = "-100%"
@@ -222,22 +224,20 @@ function projectCard() { // Função - cria efeito "fade-in" aos projetos quando
     });
 }
 
-function createProjects() { // Função - cria o elemento de cada projeto registado
-    allProjects.forEach(element => {
+function createProjects(params) { // Função - cria o elemento de cada projeto registado
+    params.forEach(element => {
         createProjectHtml(element)
     })
-    mainProject = document.querySelectorAll('.main')
-    secProject = document.querySelectorAll('.sec')
     btnFilter.forEach(element => { // filtra os projetos de acordo com a categoria
         element.addEventListener('click', filterProject)
     })
     cardProjects = document.querySelectorAll('.projects-card')
+    projectCard()
 }
 
 function createProjectHtml(e) { // Função - cria o "HTML" de cada elemento dos projetos
     let newProject = document.createElement('div')
-    let type = e.main == true ? "main" : "sec"
-    newProject.classList = `projects-card ${type}`
+    newProject.classList = `projects-card`
     newProject.innerHTML = `
         <div class="card-data">
             <label for="">${e.tech.join(" / ")}</label>
@@ -256,39 +256,22 @@ function createProjectHtml(e) { // Função - cria o "HTML" de cada elemento dos
 
 function filterProject() { // Função - filtra os projetos de acordo com a categoria
     let child = this.parentElement.querySelectorAll('button')
-    mainShow("none")
-    secShow("none")
+    let projectFilter
     child.forEach(element => {
         element.style.background = ""
         element.style.color = ""
-    });
+    })
     this.style.background = '#333'
     this.style.color = '#fdfdfd'
-    setTimeout(() => {
+        projectList.innerHTML = ""
         if (this.textContent == "Principais") {
-            mainShow("block")
-            secShow("none")
-
+            projectFilter = allProjects.filter(element => element.main)
         } else if (this.textContent == "Secundários") {
-            mainShow("none")
-            secShow("block")
+            projectFilter = allProjects.filter(element => !element.main)
         } else {
-            mainShow("block")
-            secShow("block")
+            createProjects(allProjects)
         }
-    }, 0);
-}
-
-function mainShow(e) { // Função - aplica o filtro dos projetos principais
-    mainProject.forEach(element => {
-        element.style.display = e
-    });
-}
-
-function secShow(e) { // Função - aplica o filtro dos projetos secundários
-    secProject.forEach(element => {
-        element.style.display = e
-    });
+        createProjects(projectFilter)
 }
 
 async function sendEmail(e) { // Envia o formulário de contato para meu Email
@@ -313,7 +296,6 @@ async function sendEmail(e) { // Envia o formulário de contato para meu Email
 // Chamadas
 
 wheel("") // Altera as "sections" ao scrolar o mouse ou clicar ao clicar no "menu"
-createProjects() // Cria o elemento de cada projeto registado
 changeSpan(countPage) // Altera a cor do contador lateral de acordo com a "section" atual
 btnFilter[0].click() // Deixa os projetos filtrados por "todos"
 emailjs.init("ceAIIFLHMCK_ganFy") // Chamada o "emailjs"
