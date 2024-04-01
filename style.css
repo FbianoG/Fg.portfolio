@@ -8,8 +8,6 @@
     scroll-behavior: smooth;
 }
 
-
-
 section {
     overflow: hidden;
     height: 100vh;
@@ -22,7 +20,6 @@ body {
     background: #fbfafb;
     background-repeat: no-repeat;
     position: relative;
-
 }
 
 .tech-tooltip::before {
@@ -39,6 +36,7 @@ body {
 }
 
 
+
 /* HEADER */
 
 header {
@@ -50,8 +48,6 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* background-color: #fbfafb; */
-    /* box-shadow: 0px 3px 5px #0000000d; */
     z-index: 20;
 }
 
@@ -86,7 +82,6 @@ header {
     cursor: pointer;
 }
 
-
 .menu a:hover {
     transition: 250ms;
     letter-spacing: 1px;
@@ -99,11 +94,9 @@ header {
 /* HOME */
 
 .home {
-
     width: 100%;
     max-height: 100vh;
     padding: 90px 10% 0;
-    /* border: 1px solid #aaa; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 0px;
@@ -112,7 +105,6 @@ header {
     top: 0;
     z-index: 10;
     background: #fdfdfd;
-
 }
 
 .home-apresentation {
@@ -120,14 +112,11 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid #ccc; */
     padding: 20px 0;
-
 }
 
 .apresentation-content {
     width: 70%;
-
     animation: show 1s both ease-in-out;
 }
 
@@ -141,7 +130,6 @@ header {
         transform: translatey(0px);
         opacity: 1;
     }
-
 }
 
 
@@ -289,7 +277,6 @@ header {
     align-items: center;
     justify-content: center;
     animation: show 1s both ease-in-out;
-
 }
 
 .tech-title {
@@ -302,18 +289,15 @@ header {
     font-weight: 500;
     font-size: 16px;
     border-right: 1px solid #ccc;
-    /* letter-spacing: 1px; */
 }
 
 .tech-list {
-
     display: flex;
     flex-wrap: wrap;
     gap: 20px 50px;
 }
 
 .tech-card {
-
     position: relative;
     display: flex;
     align-items: center;
@@ -378,7 +362,6 @@ header {
     z-index: 9;
 }
 
-
 .about-text {
     color: #333;
 }
@@ -392,7 +375,6 @@ header {
     width: 100%;
     height: 100vh;
     padding: 110px 0 180px;
-    /* border-bottom: 1px solid #bbb; */
     position: absolute;
     top: 50%;
     background: #222;
@@ -406,7 +388,6 @@ header {
     width: 350px;
     text-align: center;
     margin-bottom: 60px;
-
 }
 
 .contact-title h1,
@@ -462,9 +443,6 @@ header {
     color: red;
 }
 
-
-
-
 .projects-list {
 
     margin: 0 auto;
@@ -508,7 +486,6 @@ header {
     z-index: 1;
 }
 
-
 @-webkit-keyframes fade-in-right {
     0% {
         -webkit-transform: translateX(50px);
@@ -537,15 +514,10 @@ header {
     }
 }
 
-
-
-
 .projects-card:hover {
     transition: 500ms;
     border-color: #e40d2d;
 }
-
-
 
 .projects-card:hover img {
     transform: scale(0.96);
@@ -556,7 +528,6 @@ header {
     opacity: 1;
 }
 
-
 .card-data {
     width: 100%;
     height: 100%;
@@ -566,7 +537,6 @@ header {
     justify-content: flex-end;
     gap: 5px;
     background: linear-gradient(to top, #222, transparent);
-
 }
 
 .card-data a {
@@ -581,7 +551,6 @@ header {
     background: #fdfdfd;
     border: none;
     border-radius: 7px;
-    /* transition: 300ms; */
     cursor: pointer;
 }
 
