@@ -173,12 +173,16 @@ btnContactHd.addEventListener('click', () => { // Evento - scrola a página até
     }
 })
 
+btnFilter.forEach(element => { // filtra os projetos de acordo com a categoria
+    element.addEventListener('click', filterProject)
+})
+
 btnSendEmail.addEventListener('click', (e) => sendEmail(e)) // Evento = envia o formulário para o meu Email
 document.body.addEventListener('wheel', wheel) // Evento = altera as "sections" ao scrolar o mouse
 
 
 if (window.innerWidth < 1279) {
-    createProjects(allProjects)
+    btnFilter[0].click()
 }
 
 // Funções
@@ -241,15 +245,16 @@ function projectCard() { // Função - cria efeito "fade-in" aos projetos quando
 }
 
 function createProjects(params) { // Função - cria o elemento de cada projeto registado
+    console.log(params);
     params.forEach(element => {
         createProjectHtml(element)
     })
-    btnFilter.forEach(element => { // filtra os projetos de acordo com a categoria
-        element.addEventListener('click', filterProject)
-    })
+
     cardProjects = document.querySelectorAll('.projects-card')
     projectCard()
 }
+
+
 
 function createProjectHtml(e) { // Função - cria o "HTML" de cada elemento dos projetos
     let newProject = document.createElement('div')
@@ -282,12 +287,13 @@ function filterProject() { // Função - filtra os projetos de acordo com a cate
     projectList.innerHTML = ""
     if (this.textContent == "Principais") {
         projectFilter = allProjects.filter(element => element.main)
+        createProjects(projectFilter)
     } else if (this.textContent == "Secundários") {
         projectFilter = allProjects.filter(element => !element.main)
+        createProjects(projectFilter)
     } else {
         createProjects(allProjects)
     }
-    createProjects(projectFilter)
 }
 
 async function sendEmail(e) { // Envia o formulário de contato para meu Email
