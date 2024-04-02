@@ -49,13 +49,14 @@ let allProjects = [ // Projetos
         src: "img/SeeBox.png",
     },
     {
-        name: "Calculadora",
+        name: "Tabela Serie B",
         main: false,
         tech: ["HTML", "CSS", "JS"],
-        webCode: "https://github.com/FbianoG/Calculadora",
-        webLink: "https://fbianog.github.io/Calculadora/",
-        src: "img/calc.png",
+        webCode: "https://github.com/FbianoG/Api-Futebol",
+        webLink: "https://fbianog.github.io/Api-Futebol/",
+        src: "img/tabela.png",
     },
+    
     {
         name: "App Estácio - Mobile",
         main: false,
@@ -71,6 +72,14 @@ let allProjects = [ // Projetos
         webCode: "https://github.com/FbianoG/JogoDaVelha",
         webLink: "https://fbianog.github.io/JogoDaVelha/",
         src: "img/velha.png",
+    },
+    {
+        name: "Calculadora",
+        main: false,
+        tech: ["HTML", "CSS", "JS"],
+        webCode: "https://github.com/FbianoG/Calculadora",
+        webLink: "https://fbianog.github.io/Calculadora/",
+        src: "img/calc.png",
     },
 
 ]
