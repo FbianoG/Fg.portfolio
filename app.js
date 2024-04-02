@@ -56,7 +56,7 @@ let allProjects = [ // Projetos
         webLink: "https://fbianog.github.io/Api-Futebol/",
         src: "img/tabela.png",
     },
-    
+
     {
         name: "App Estácio - Mobile",
         main: false,
@@ -177,9 +177,16 @@ btnSendEmail.addEventListener('click', (e) => sendEmail(e)) // Evento = envia o 
 document.body.addEventListener('wheel', wheel) // Evento = altera as "sections" ao scrolar o mouse
 
 
+if (window.innerWidth < 1279) {
+    createProjects(allProjects)
+}
+
 // Funções
 
 function wheel(e) { // Função - altera as "sections" ao scrolar o mouse ou clicar ao clicar no "menu"
+    if (window.innerWidth < 1279) {
+        return
+    }
     if (e.deltaY > 0) {
         countPage += 1
         countPage > 3 ? countPage = 3 : ''
@@ -272,15 +279,15 @@ function filterProject() { // Função - filtra os projetos de acordo com a cate
     })
     this.style.background = '#333'
     this.style.color = '#fdfdfd'
-        projectList.innerHTML = ""
-        if (this.textContent == "Principais") {
-            projectFilter = allProjects.filter(element => element.main)
-        } else if (this.textContent == "Secundários") {
-            projectFilter = allProjects.filter(element => !element.main)
-        } else {
-            createProjects(allProjects)
-        }
-        createProjects(projectFilter)
+    projectList.innerHTML = ""
+    if (this.textContent == "Principais") {
+        projectFilter = allProjects.filter(element => element.main)
+    } else if (this.textContent == "Secundários") {
+        projectFilter = allProjects.filter(element => !element.main)
+    } else {
+        createProjects(allProjects)
+    }
+    createProjects(projectFilter)
 }
 
 async function sendEmail(e) { // Envia o formulário de contato para meu Email
