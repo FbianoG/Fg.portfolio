@@ -245,7 +245,7 @@ function projectCard() { // Função - cria efeito "fade-in" aos projetos quando
 }
 
 function createProjects(params) { // Função - cria o elemento de cada projeto registado
-    console.log(params);
+    
     params.forEach(element => {
         createProjectHtml(element)
     })
