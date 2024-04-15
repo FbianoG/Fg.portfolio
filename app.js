@@ -9,36 +9,20 @@ let allProjects = [ // Projetos
         src: "img/FG.torrent.png",
     },
     {
+        name: "ToDoList",
+        main: true,
+        tech: ["React", "Node.js", "MongoDB"],
+        webCode: "https://github.com/FbianoG/ToDoList-Back",
+        webLink: "https://to-do-list-react-eight-ochre.vercel.app/",
+        src: "img/ToDoList.png",
+    },
+    {
         name: "FisioMov",
         main: true,
         tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
         webCode: "https://github.com/FbianoG/Fisio-Mov",
         webLink: "https://fbianog.github.io/FisioMov-Front/public/html/index.html",
         src: "img/fisioMov.png",
-    },
-    {
-        name: "Steam",
-        main: false,
-        tech: ["HTML", "CSS", "JS"],
-        webCode: "https://github.com/FbianoG/Steam-CopSite",
-        webLink: "https://fbianog.github.io/Steam-CopSite/",
-        src: "img/Steam-CopySite.png",
-    },
-    {
-        name: "Pokedex",
-        main: false,
-        tech: ["HTML", "CSS", "JS"],
-        webCode: "https://github.com/FbianoG/Pokedex",
-        webLink: "https://fbianog.github.io/Pokedex/",
-        src: "img/Pokedex.png",
-    },
-    {
-        name: "OpenClima",
-        main: false,
-        tech: ["HTML", "CSS", "JS"],
-        webCode: "https://github.com/FbianoG/Pokedex",
-        webLink: "https://fbianog.github.io/OpenClima/",
-        src: "img/openClima.png",
     },
     {
         name: "SeeBox",
@@ -49,7 +33,31 @@ let allProjects = [ // Projetos
         src: "img/SeeBox.png",
     },
     {
-        name: "Tabela Serie B",
+        name: "Pokedex",
+        main: false,
+        tech: ["HTML", "CSS", "JS"],
+        webCode: "https://github.com/FbianoG/Pokedex",
+        webLink: "https://fbianog.github.io/Pokedex/",
+        src: "img/Pokedex.png",
+    },
+    {
+        name: "Steam",
+        main: false,
+        tech: ["HTML", "CSS", "JS"],
+        webCode: "https://github.com/FbianoG/Steam-CopSite",
+        webLink: "https://fbianog.github.io/Steam-CopSite/",
+        src: "img/Steam-CopySite.png",
+    },
+    {
+        name: "OpenClima",
+        main: false,
+        tech: ["HTML", "CSS", "JS"],
+        webCode: "https://github.com/FbianoG/Pokedex",
+        webLink: "https://fbianog.github.io/OpenClima/",
+        src: "img/openClima.png",
+    },
+    {
+        name: "Tabela Brasileirão",
         main: false,
         tech: ["HTML", "CSS", "JS"],
         webCode: "https://github.com/FbianoG/Api-Futebol",
@@ -245,7 +253,7 @@ function projectCard() { // Função - cria efeito "fade-in" aos projetos quando
 }
 
 function createProjects(params) { // Função - cria o elemento de cada projeto registado
-    
+
     params.forEach(element => {
         createProjectHtml(element)
     })
