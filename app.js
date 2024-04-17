@@ -9,12 +9,12 @@ let allProjects = [ // Projetos
         src: "img/FG.torrent.png",
     },
     {
-        name: "ToDoList",
+        name: "Giotrology",
         main: true,
         tech: ["React", "Node.js", "MongoDB"],
-        webCode: "https://github.com/FbianoG/ToDoList-Back",
-        webLink: "https://to-do-list-react-eight-ochre.vercel.app/",
-        src: "img/ToDoList.png",
+        webCode: "https://github.com/FbianoG/Giotrology",
+        webLink: "https://giotrology.vercel.app/",
+        src: "img/Giotrology.png",
     },
     {
         name: "FisioMov",
@@ -23,6 +23,14 @@ let allProjects = [ // Projetos
         webCode: "https://github.com/FbianoG/Fisio-Mov",
         webLink: "https://fbianog.github.io/FisioMov-Front/public/html/index.html",
         src: "img/fisioMov.png",
+    },
+    {
+        name: "ToDoList",
+        main: true,
+        tech: ["React", "Node.js", "MongoDB"],
+        webCode: "https://github.com/FbianoG/ToDoList-Back",
+        webLink: "https://to-do-list-react-eight-ochre.vercel.app/",
+        src: "img/ToDoList.png",
     },
     {
         name: "SeeBox",
