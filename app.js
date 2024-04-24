@@ -7,6 +7,7 @@ let allProjects = [ // Projetos
         webCode: "https://github.com/FbianoG/FG.Torrent",
         webLink: "https://fg-torrent.onrender.com/",
         src: "img/FG.torrent.png",
+        details: "Desenvolvida para otimizar a gestão de informações em recepções hospitalares. Oferece fácil acesso a senhas de planos de saúde, armazenamento de documentos, geração de guias de internação, uma lista de ramais e muito mais, tudo controlado por um painel de gestão eficiente."
     },
     {
         name: "Giotrology",
@@ -15,6 +16,7 @@ let allProjects = [ // Projetos
         webCode: "https://github.com/FbianoG/Giotrology",
         webLink: "https://giotrology.vercel.app/",
         src: "img/Giotrology.png",
+        details: "Projetado para que a proprietária possa destacar seus serviços astrológicos. Além de oferecer consultas e análises astrológicas, o site possui uma seção exclusiva para a publicação de artigos relacionados à astrologia. Cada artigo é criado e gerenciado por um sistema que os armazena em um banco de dados."
     },
     {
         name: "FisioMov",
@@ -23,6 +25,7 @@ let allProjects = [ // Projetos
         webCode: "https://github.com/FbianoG/Fisio-Mov",
         webLink: "https://fbianog.github.io/FisioMov-Front/public/html/index.html",
         src: "img/fisioMov.png",
+        details: "É um site de acompanhamento de tratamento fisioterapêutico online, equipado com IA para captura de movimento que orienta pacientes durante exercícios, garantindo a correta execução. Inclui um painel de gestão que permite a fisioterapeutas personalizar e monitorar os exercícios de cada paciente individualmente."
     },
     {
         name: "ToDoList",
@@ -31,6 +34,7 @@ let allProjects = [ // Projetos
         webCode: "https://github.com/FbianoG/ToDoList-Back",
         webLink: "https://to-do-list-react-eight-ochre.vercel.app/",
         src: "img/ToDoList.png",
+        details: "É um aplicativo prático de gerenciamento de tarefas que permite aos usuários adicionar, organizar e controlar suas atividades diárias. Com uma interface simples e intuitiva, os usuários podem facilmente criar listas de tarefas, definir prioridades e acompanhar o progresso de cada item."
     },
     {
         name: "SeeBox",
@@ -39,6 +43,7 @@ let allProjects = [ // Projetos
         webCode: "https://github.com/FbianoG/SeeBox",
         webLink: "https://fbianog.github.io/SeeBox/login.html",
         src: "img/SeeBox.png",
+        details: "Este sistema interconecta informações médicas, a recepção e a gestão de leitos, facilitando a comunicação entre diferentes setores do hospital. O aplicativo permite um acompanhamento completo do processo do paciente, desde sua entrada até a internação, garantindo uma resposta rápida e eficaz"
     },
     {
         name: "Pokedex",
@@ -287,8 +292,28 @@ function createProjectHtml(e) { // Função - cria o "HTML" de cada elemento dos
         <div class="card-image">
             <img src="${e.src}" alt="Imagem ilustrativa do site">
         </div>
+        <div class="cardBtnDatails">?</div>
+        <div class="cardDatails">
+            <h3>${e.name}</h3>
+            <label for="">${e.tech.join(" / ")}</label>
+            <p>${e.details}</p>
+        </div>
     `
     projectList.appendChild(newProject)
+    newProject.querySelectorAll(".cardBtnDatails")[0].addEventListener('click', showDetails)
+}
+
+function showDetails() {
+    const card = this.parentElement
+    if (this.textContent == "X") {
+        this.textContent = '?'
+        this.style.color = ""
+        card.querySelectorAll('.cardDatails')[0].style.top = ''
+    } else {
+        this.textContent = 'X'
+        this.style.color = "#f30438"
+        card.querySelectorAll('.cardDatails')[0].style.top = '0'
+    }
 }
 
 function filterProject() { // Função - filtra os projetos de acordo com a categoria
