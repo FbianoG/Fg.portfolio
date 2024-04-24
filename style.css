@@ -1269,6 +1269,11 @@ footer div p b {
     .projects-list {
         min-width: 95%;
     }
+    
+    .cardBtnDatails {
+        background: #222;
+        color: #fdfdfd;
+    }
 
     .cardDatails p {
         margin: 10px 0 0 ;
