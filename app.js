@@ -4,7 +4,7 @@ let allProjects = [ // Projetos
         name: "FG.Hub",
         main: true,
         tech: ["React", "Node.js", "MongoDB"],
-        webCode: "",
+        webCode: "https://github.com/FbianoG/FG.Hub",
         webLink: "https://fghub.vercel.app/",
         src: "img/FG.torrent.png",
         details: "Desenvolvida para otimizar a gestão de informações em recepções hospitalares. Oferece fácil acesso a senhas de planos de saúde, armazenamento de documentos, geração de guias de internação, uma lista de ramais e muito mais, tudo controlado por um painel de gestão eficiente."
@@ -22,7 +22,7 @@ let allProjects = [ // Projetos
         name: "SeeBox",
         main: true,
         tech: ["React", "Node.js", "MongoDB"],
-        webCode: "",
+        webCode: "https://github.com/FbianoG/SeeBox",
         webLink: "https://seebox.vercel.app/",
         src: "img/SeeBox.png",
         details: "Este sistema interconecta informações médicas, a recepção e a gestão de leitos, facilitando a comunicação entre diferentes setores do hospital. O aplicativo permite um acompanhamento completo do processo do paciente, desde sua entrada até a internação, garantindo uma resposta rápida e eficaz"
