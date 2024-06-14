@@ -1,11 +1,11 @@
 // Variáveis
 let allProjects = [ // Projetos
     {
-        name: "FG.Torrent",
+        name: "FG.Hub",
         main: true,
-        tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
-        webCode: "https://github.com/FbianoG/FG.Torrent",
-        webLink: "https://fg-torrent.onrender.com/",
+        tech: ["React", "Node.js", "MongoDB"],
+        webCode: "",
+        webLink: "https://fghub.vercel.app/",
         src: "img/FG.torrent.png",
         details: "Desenvolvida para otimizar a gestão de informações em recepções hospitalares. Oferece fácil acesso a senhas de planos de saúde, armazenamento de documentos, geração de guias de internação, uma lista de ramais e muito mais, tudo controlado por um painel de gestão eficiente."
     },
@@ -17,6 +17,15 @@ let allProjects = [ // Projetos
         webLink: "https://movie-film-plum.vercel.app/",
         src: "img/movieFilm.png",
         details: "Aqui, você pode navegar por uma vasta biblioteca de filmes, acessar seus detalhes e informações sobre elencos. Crie uma lista de seus filmes favoritos. O MovieFilm é o lugar perfeito para planejar sua próxima sessão de cinema."
+    },
+    {
+        name: "SeeBox",
+        main: true,
+        tech: ["React", "Node.js", "MongoDB"],
+        webCode: "",
+        webLink: "https://seebox.vercel.app/",
+        src: "img/SeeBox.png",
+        details: "Este sistema interconecta informações médicas, a recepção e a gestão de leitos, facilitando a comunicação entre diferentes setores do hospital. O aplicativo permite um acompanhamento completo do processo do paciente, desde sua entrada até a internação, garantindo uma resposta rápida e eficaz"
     },
     {
         name: "Giotrology",
@@ -44,15 +53,6 @@ let allProjects = [ // Projetos
         webLink: "https://to-do-list-react-eight-ochre.vercel.app/",
         src: "img/ToDoList.png",
         details: "É um aplicativo prático de gerenciamento de tarefas que permite aos usuários adicionar, organizar e controlar suas atividades diárias. Com uma interface simples e intuitiva, os usuários podem facilmente criar listas de tarefas, definir prioridades e acompanhar o progresso de cada item."
-    },
-    {
-        name: "SeeBox",
-        main: true,
-        tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
-        webCode: "https://github.com/FbianoG/SeeBox",
-        webLink: "https://fbianog.github.io/SeeBox/login.html",
-        src: "img/SeeBox.png",
-        details: "Este sistema interconecta informações médicas, a recepção e a gestão de leitos, facilitando a comunicação entre diferentes setores do hospital. O aplicativo permite um acompanhamento completo do processo do paciente, desde sua entrada até a internação, garantindo uma resposta rápida e eficaz"
     },
     {
         name: "Pokedex",
