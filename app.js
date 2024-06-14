@@ -3,7 +3,7 @@ let allProjects = [ // Projetos
     {
         name: "FG.Torrent",
         main: true,
-        tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
+        tech: ["React", "Node.js", "MongoDB"],
         webCode: "",
         webLink: "https://fghub.vercel.app/",
         src: "img/FG.torrent.png",
