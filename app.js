@@ -4,8 +4,8 @@ let allProjects = [ // Projetos
         name: "FG.Torrent",
         main: true,
         tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
-        webCode: "https://github.com/FbianoG/FG.Torrent",
-        webLink: "https://fg-torrent.onrender.com/",
+        webCode: "",
+        webLink: "https://fghub.vercel.app/",
         src: "img/FG.torrent.png",
         details: "Desenvolvida para otimizar a gestão de informações em recepções hospitalares. Oferece fácil acesso a senhas de planos de saúde, armazenamento de documentos, geração de guias de internação, uma lista de ramais e muito mais, tudo controlado por um painel de gestão eficiente."
     },
