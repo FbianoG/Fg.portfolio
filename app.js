@@ -14,7 +14,7 @@ let allProjects = [ // Projetos
         main: true,
         tech: ["React", "Node.js", "MongoDB"],
         webCode: "https://github.com/FbianoG/MovieFilm",
-        webLink: "https://movie-film-plum.vercel.app/",
+        webLink: "https://moviefilme.vercel.app/",
         src: "img/movieFilm.png",
         details: "Aqui, você pode navegar por uma vasta biblioteca de filmes, acessar seus detalhes e informações sobre elencos. Crie uma lista de seus filmes favoritos. O MovieFilm é o lugar perfeito para planejar sua próxima sessão de cinema."
     },

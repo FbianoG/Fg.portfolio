@@ -364,6 +364,8 @@ header {
 
 .about-text {
     color: #333;
+    text-align: justify;
+    font-size: 18px;
 }
 
 
@@ -406,7 +408,8 @@ header {
 .projects-title p,
 .about-title p {
     color: #666;
-    font-size: 14px;
+    font-size: 16px;
+    /* text-align: justify; */
 }
 
 .projects-filter {
@@ -603,8 +606,8 @@ header {
 
 .cardBtnDatails {
     position: absolute;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     top: 20px;
     right: -60px;
     background: #fff;
@@ -617,7 +620,7 @@ header {
     color: #222;
     z-index: 1;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     /* border: 1px solid #e40d2d; */
 }
@@ -630,7 +633,6 @@ header {
 
 .projects-card:hover .cardBtnDatails {
     right: 20px;
-
 }
 
 .cardDatails {
