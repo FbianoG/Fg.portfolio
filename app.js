@@ -37,6 +37,15 @@ let allProjects = [ // Projetos
         details: "Projetado para que a proprietária possa destacar seus serviços astrológicos. Além de oferecer consultas e análises astrológicas, o site possui uma seção exclusiva para a publicação de artigos relacionados à astrologia. Cada artigo é criado e gerenciado por um sistema que os armazena em um banco de dados."
     },
     {
+        name: "FinanceTS",
+        main: true,
+        tech: ["TypeScript", "React"],
+        webCode: "https://github.com/FbianoG/FinanceTS",
+        webLink: "https://ffinancets.vercel.app/",
+        src: "img/financets.png",
+        details: "Projeto que visa demostrar o uso de TypeScript junto ao React.js usando algorítmos para controle de gastos financeiros."
+    },
+    {
         name: "FisioMov",
         main: true,
         tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],

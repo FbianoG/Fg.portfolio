@@ -999,29 +999,7 @@ footer div p b {
     }
 }
 
-/* MB <= 767 - TB <= 1023 - */
-@media screen and (max-height: 660px) {
-    .home-apresentation {
-        padding: 0;
-    }
 
-    .home-tech {
-        font-size: 14px;
-    }
-
-
-    .apresentation-content {
-        width: 85%;
-    }
-
-    .apresentation-content p {
-        font-size: 16px;
-    }
-
-    .scroll {
-        display: none;
-    }
-}
 
 /* MB <= 767 - TB <= 1023 - */
 @media screen and (max-width: 1550px) {
@@ -1223,6 +1201,32 @@ footer div p b {
 }
 
 /* MB <= 767 - TB <= 1023 - */
+@media screen and (max-height: 660px) {
+    .home-apresentation {
+        padding: 0;
+    }
+
+    .home-tech {
+        font-size: 14px;
+    }
+
+
+    .apresentation-content {
+        width: 85%;
+    }
+
+    .apresentation-content p {
+        font-size: 16px;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+
+}
+
+/* MB <= 767 - TB <= 1023 - */
 @media screen and (max-width: 500px) {
     .contact-content {
         width: 90%;
@@ -1281,9 +1285,11 @@ footer div p b {
         margin: 10px 0 0 ;
         max-height: 220px;
     }
+
     .cardDatails h3 {
         margin: 0 0 5px;
     }
+    
     .cardDatails label {
         color: #aaa;
     }
@@ -1291,9 +1297,4 @@ footer div p b {
     .cardBtnDatails {
         right: 20px;
     }
-
-
-
-
-
 }
