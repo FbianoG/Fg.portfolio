@@ -354,12 +354,19 @@ header {
 .about {
     width: 100%;
     height: 100vh;
-    padding: 120px 15%;
+    padding: 120px 10%;
     opacity: 1;
     position: absolute;
     top: 50%;
     background: #eee;
     z-index: 9;
+}
+
+/* MB <= 767 - TB <= 1023 - */
+@media screen and (max-width: 1439px) {
+    .about {
+        padding: 80px 10%;
+    }
 }
 
 .about-text {
@@ -1275,21 +1282,21 @@ footer div p b {
     .projects-list {
         min-width: 95%;
     }
-    
+
     .cardBtnDatails {
         background: #222;
         color: #fdfdfd;
     }
 
     .cardDatails p {
-        margin: 10px 0 0 ;
+        margin: 10px 0 0;
         max-height: 220px;
     }
 
     .cardDatails h3 {
         margin: 0 0 5px;
     }
-    
+
     .cardDatails label {
         color: #aaa;
     }
