@@ -146,26 +146,9 @@ let startX
 let scrollLeft
 let countPage = 0 // Contador da "section" atual
 
-const btnMenu = document.querySelector('#btnMenu')
-
-console.log(btnMenu)
 
 // Eventos
 
-btnMenu.addEventListener('click', () => {
-    // document.querySelectorAll('.menu')[0].style.transform = 'translateX(90%)'
-    //  = 'translateX(0%)'
-    document.querySelectorAll('.menu')[0].style.transform = 'translateX(0)'
-    document.querySelectorAll('.menu')[0].style.opacity = '1'
-
-})
-btnMenu.addEventListener('blur', () => {
-    // document.querySelectorAll('.menu')[0].style.transform = 'translateX(90%)'
-    //  = 'translateX(0%)'
-    document.querySelectorAll('.menu')[0].style.transform = 'translateX(90%)'
-    document.querySelectorAll('.menu')[0].style.opacity = '0'
-
-})
 
 projectList.addEventListener('mousedown', (e) => {
     isDragging = true
