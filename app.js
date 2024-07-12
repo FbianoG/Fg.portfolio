@@ -28,6 +28,15 @@ let allProjects = [ // Projetos
         details: "Este sistema interconecta informações médicas, a recepção e a gestão de leitos, facilitando a comunicação entre diferentes setores do hospital. O aplicativo permite um acompanhamento completo do processo do paciente, desde sua entrada até a internação, garantindo uma resposta rápida e eficaz"
     },
     {
+        name: "FisioMov",
+        main: true,
+        tech: ["TypeScript", "React", "Node.js", "MongoDB"],
+        webCode: "https://github.com/FbianoG/FisioMov-new",
+        webLink: "https://fisiomov.vercel.app/",
+        src: "img/fisioMov.png",
+        details: "É um site de acompanhamento de tratamento fisioterapêutico online, equipado com IA para captura de movimento que orienta pacientes durante exercícios, garantindo a correta execução. Inclui um painel de gestão para personalizar e monitorar os exercícios de cada paciente."
+    },
+    {
         name: "Giotrology",
         main: true,
         tech: ["React", "Node.js", "MongoDB"],
@@ -44,15 +53,6 @@ let allProjects = [ // Projetos
         webLink: "https://ffinancets.vercel.app/",
         src: "img/financets.png",
         details: "Projeto que visa demostrar o uso de TypeScript junto ao React.js usando algorítmos para controle de gastos financeiros."
-    },
-    {
-        name: "FisioMov",
-        main: true,
-        tech: ["HTML", "CSS", "JS", "Node.js", "MongoDB"],
-        webCode: "https://github.com/FbianoG/Fisio-Mov",
-        webLink: "https://fbianog.github.io/FisioMov-Front/public/html/index.html",
-        src: "img/fisioMov.png",
-        details: "É um site de acompanhamento de tratamento fisioterapêutico online, equipado com IA para captura de movimento que orienta pacientes durante exercícios, garantindo a correta execução. Inclui um painel de gestão que permite a fisioterapeutas personalizar e monitorar os exercícios de cada paciente individualmente."
     },
     {
         name: "ToDoList",
@@ -146,8 +146,26 @@ let startX
 let scrollLeft
 let countPage = 0 // Contador da "section" atual
 
+const btnMenu = document.querySelector('#btnMenu')
+
+console.log(btnMenu)
 
 // Eventos
+
+btnMenu.addEventListener('click', () => {
+    // document.querySelectorAll('.menu')[0].style.transform = 'translateX(90%)'
+    //  = 'translateX(0%)'
+    document.querySelectorAll('.menu')[0].style.transform = 'translateX(0)'
+    document.querySelectorAll('.menu')[0].style.opacity = '1'
+
+})
+btnMenu.addEventListener('blur', () => {
+    // document.querySelectorAll('.menu')[0].style.transform = 'translateX(90%)'
+    //  = 'translateX(0%)'
+    document.querySelectorAll('.menu')[0].style.transform = 'translateX(90%)'
+    document.querySelectorAll('.menu')[0].style.opacity = '0'
+
+})
 
 projectList.addEventListener('mousedown', (e) => {
     isDragging = true
