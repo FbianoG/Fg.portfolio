@@ -19,13 +19,13 @@ let allProjects = [ // Projetos
         details: "Aqui, você pode navegar por uma vasta biblioteca de filmes, acessar seus detalhes e informações sobre elencos. Crie uma lista de seus filmes favoritos. O MovieFilm é o lugar perfeito para planejar sua próxima sessão de cinema."
     },
     {
-        name: "SeeBox",
+        name: "Tiips Score",
         main: true,
-        tech: ["React", "Node.js", "MongoDB"],
-        webCode: "https://github.com/FbianoG/SeeBox",
-        webLink: "https://seebox.vercel.app/",
-        src: "img/SeeBox.png",
-        details: "Este sistema interconecta informações médicas, a recepção e a gestão de leitos, facilitando a comunicação entre diferentes setores do hospital. O aplicativo permite um acompanhamento completo do processo do paciente, desde sua entrada até a internação, garantindo uma resposta rápida e eficaz"
+        tech: ["React", "TypeScript"],
+        webCode: "https://github.com/FbianoG/AllTiips-Score",
+        webLink: "https://vite-project-hazel-nu.vercel.app/",
+        src: "img/tiips.png",
+        details: " Axilia os usuários a calcular a probabilidade de suas apostas serem bem-sucedidas. Fornecendo informações detalhadas e ferramentas para ajudar você a tomar decisões informadas."
     },
     {
         name: "FisioMov",
@@ -37,6 +37,16 @@ let allProjects = [ // Projetos
         details: "É um site de acompanhamento de tratamento fisioterapêutico online, equipado com IA para captura de movimento que orienta pacientes durante exercícios, garantindo a correta execução. Inclui um painel de gestão para personalizar e monitorar os exercícios de cada paciente."
     },
     {
+        name: "SeeBox",
+        main: true,
+        tech: ["React", "Node.js", "MongoDB"],
+        webCode: "https://github.com/FbianoG/SeeBox",
+        webLink: "https://seebox.vercel.app/",
+        src: "img/SeeBox.png",
+        details: "Este sistema interconecta informações médicas, a recepção e a gestão de leitos, facilitando a comunicação entre diferentes setores do hospital. O aplicativo permite um acompanhamento completo do processo do paciente, desde sua entrada até a internação, garantindo uma resposta rápida e eficaz"
+    },
+
+    {
         name: "Giotrology",
         main: true,
         tech: ["React", "Node.js", "MongoDB"],
@@ -47,7 +57,7 @@ let allProjects = [ // Projetos
     },
     {
         name: "FinanceTS",
-        main: true,
+        main: false,
         tech: ["TypeScript", "React"],
         webCode: "https://github.com/FbianoG/FinanceTS",
         webLink: "https://ffinancets.vercel.app/",
@@ -56,7 +66,7 @@ let allProjects = [ // Projetos
     },
     {
         name: "ToDoList",
-        main: true,
+        main: false,
         tech: ["React", "Node.js", "MongoDB"],
         webCode: "https://github.com/FbianoG/ToDoList-Back",
         webLink: "https://to-do-list-react-eight-ochre.vercel.app/",
