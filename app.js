@@ -45,7 +45,6 @@ let allProjects = [ // Projetos
         src: "img/SeeBox.png",
         details: "Este sistema interconecta informações médicas, a recepção e a gestão de leitos, facilitando a comunicação entre diferentes setores do hospital. O aplicativo permite um acompanhamento completo do processo do paciente, desde sua entrada até a internação, garantindo uma resposta rápida e eficaz"
     },
-
     {
         name: "Giotrology",
         main: true,
@@ -54,6 +53,24 @@ let allProjects = [ // Projetos
         webLink: "https://giotrology.vercel.app/",
         src: "img/Giotrology.png",
         details: "Projetado para que a proprietária possa destacar seus serviços astrológicos. Além de oferecer consultas e análises astrológicas, o site possui uma seção exclusiva para a publicação de artigos relacionados à astrologia. Cada artigo é criado e gerenciado por um sistema que os armazena em um banco de dados."
+    },
+    {
+        name: "ChatBot-GramJS",
+        main: true,
+        tech: ["JavaScript", "Node.js", "GramJS"],
+        webCode: "https://github.com/FbianoG/ChatBot-Telegram",
+        webLink: "https://t.me/AllTiips",
+        src: "img/chatbotgram.png",
+        details: "ChatBot que repassa e gerencia mensagens de um grupo de aposta do Telegram e envia para outro grupo. Edita, reply, vídeos, aúdios, mensagens"
+    },
+    {
+        name: "ChatBot-Assist",
+        main: true,
+        tech: ["TypeScript", "Node.js", "GramJS"],
+        webCode: "https://github.com/FbianoG/ChatBot-Assist",
+        webLink: "https://t.me/AllTiips_bot",
+        src: "img/chatbotassit.png",
+        details: "Complemento do 'ChatBot-Gramjs'. ChatBot criado para tirar dúvidas dos participantes do grupo."
     },
     {
         name: "FinanceTS",
@@ -156,27 +173,30 @@ let startX
 let scrollLeft
 let countPage = 0 // Contador da "section" atual
 
+const btnNext = document.querySelector('#projects__btn-next')
+const btnReturn = document.querySelector('#projects__btn-return')
+
 
 // Eventos
 
 
-projectList.addEventListener('mousedown', (e) => {
-    isDragging = true
-    startX = e.pageX - projectList.offsetLeft
-    scrollLeft = projectList.scrollLeft
-})
+// projectList.addEventListener('mousedown', (e) => {
+//     isDragging = true
+//     startX = e.pageX - projectList.offsetLeft
+//     scrollLeft = projectList.scrollLeft
+// })
 
-projectList.addEventListener('mouseup', () => {
-    isDragging = false
-})
+// projectList.addEventListener('mouseup', () => {
+//     isDragging = false
+// })
 
-projectList.addEventListener('mousemove', (e) => {
-    if (!isDragging) return
-    e.preventDefault()
-    const x = e.pageX - projectList.offsetLeft;
-    const walk = (x - startX) * 2
-    projectList.scrollLeft = scrollLeft - walk;
-})
+// projectList.addEventListener('mousemove', (e) => {
+//     if (!isDragging) return
+//     e.preventDefault()
+//     const x = e.pageX - projectList.offsetLeft;
+//     const walk = (x - startX) * 2
+//     projectList.scrollLeft = scrollLeft - walk;
+// })
 
 btnInit.addEventListener('click', () => { // Evento - scrola a página até o "Início"
     if (window.innerWidth <= 1278) {
@@ -224,7 +244,17 @@ btnContactHd.addEventListener('click', () => { // Evento - scrola a página até
 })
 
 btnFilter.forEach(element => { // filtra os projetos de acordo com a categoria
+    
     element.addEventListener('click', filterProject)
+})
+
+
+btnReturn.addEventListener('click', () => { // Move a a lista de projetos para direita
+    projectList.scrollLeft = projectList.scrollLeft - 660
+})
+
+btnNext.addEventListener('click', () => {// Move a a lista de projetos para esquerda
+    projectList.scrollLeft = projectList.scrollLeft + 660
 })
 
 btnSendEmail.addEventListener('click', (e) => sendEmail(e)) // Evento = envia o formulário para o meu Email
@@ -346,6 +376,7 @@ function showDetails() {
 }
 
 function filterProject() { // Função - filtra os projetos de acordo com a categoria
+    projectList.scrollLeft = 0
     let child = this.parentElement.querySelectorAll('button')
     let projectFilter
     child.forEach(element => {

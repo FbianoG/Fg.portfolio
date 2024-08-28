@@ -35,8 +35,6 @@ body {
     height: 15px;
 }
 
-
-
 /* HEADER */
 
 header {
@@ -89,8 +87,6 @@ header {
 }
 
 
-
-
 /* HOME */
 
 .home {
@@ -131,8 +127,6 @@ header {
         opacity: 1;
     }
 }
-
-
 
 
 .apresentation-content h2 {
@@ -195,10 +189,6 @@ header {
     margin-left: 10px;
     color: #eee;
 }
-
-
-
-
 
 
 /* HOME IMAGE */
@@ -266,8 +256,6 @@ header {
     box-shadow: none;
     border: 1px solid #ddd;
 }
-
-
 
 /* HOME TECH */
 
@@ -347,8 +335,6 @@ header {
     }
 }
 
-
-
 /* ABOUT */
 
 .about {
@@ -374,8 +360,6 @@ header {
     text-align: justify;
     font-size: 18px;
 }
-
-
 
 
 /* PROJECTS */
@@ -464,25 +448,29 @@ header {
     gap: 30px;
     cursor: grab;
     overflow: hidden;
+
+
+    &::-webkit-scrollbar {
+        height: 7px;
+
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #333;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: linear-gradient(to right, #ff3300, #e40d2d);
+    }
 }
 
 .projects-list:active {
     cursor: grabbing;
 }
 
-.projects-list::-webkit-scrollbar {
-    height: 5px;
-}
 
-.projects-list::-webkit-scrollbar-track {
-    background: #333;
-    border-radius: 10px;
-}
-
-.projects-list::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(to right, #ff3300, #e40d2d);
-}
 
 .projects-card {
     width: 300px;
@@ -670,6 +658,26 @@ header {
     top: 0px;
 }
 
+
+.projects__groupBtn {
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.projects__groupBtn button {
+    color: #fdfdfd;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      opacity: .5;  
+    }
+}
 
 
 .contact-title {
@@ -1202,6 +1210,9 @@ footer div p b {
         row-gap: 20px;
     }
 
+    .projects__groupBtn {
+        display: none;
+    }
 
 }
 
@@ -1282,13 +1293,13 @@ footer div p b {
     }
 
     .cardBtnDatails {
-        
+
         background: #222;
         color: #fdfdfd;
     }
-    
+
     .cardDatails {
-        padding: 20px 20px 5px 20px ;
+        padding: 20px 20px 5px 20px;
     }
 
     .cardDatails p {
