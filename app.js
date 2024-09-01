@@ -28,6 +28,15 @@ let allProjects = [ // Projetos
         details: " Axilia os usuários a calcular a probabilidade de suas apostas serem bem-sucedidas. Fornecendo informações detalhadas e ferramentas para ajudar você a tomar decisões informadas."
     },
     {
+        name: "Game Less",
+        main: true,
+        tech: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+        webCode: "https://github.com/FbianoG/Game-Less",
+        webLink: "https://game-less.vercel.app/",
+        src: "img/gameLess.png",
+        details: "É uma aplicação web que permite aos usuários explorar e adquirir jogos, semelhante ao modelo do Xbox Game Pass. Os usuários podem criar uma conta, visualizar detalhes dos jogos e adquirir títulos disponíveis no catálogo."
+    },
+    {
         name: "FisioMov",
         main: true,
         tech: ["TypeScript", "React", "Node.js", "MongoDB"],
@@ -122,7 +131,6 @@ let allProjects = [ // Projetos
         webLink: "https://fbianog.github.io/Api-Futebol/",
         src: "img/tabela.png",
     },
-
     {
         name: "App Estácio - Mobile",
         main: false,
