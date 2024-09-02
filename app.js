@@ -258,11 +258,11 @@ btnFilter.forEach(element => { // filtra os projetos de acordo com a categoria
 
 
 btnReturn.addEventListener('click', () => { // Move a a lista de projetos para direita
-    projectList.scrollLeft = projectList.scrollLeft - 660
+    projectList.scrollLeft -= projectList.clientWidth
 })
 
 btnNext.addEventListener('click', () => {// Move a a lista de projetos para esquerda
-    projectList.scrollLeft = projectList.scrollLeft + 660
+    projectList.scrollLeft += projectList.clientWidth
 })
 
 btnSendEmail.addEventListener('click', (e) => sendEmail(e)) // Evento = envia o formulário para o meu Email
